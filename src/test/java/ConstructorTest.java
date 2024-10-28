@@ -10,7 +10,7 @@ import pom.MainPage;
 
 import java.time.Duration;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertEquals;
 
 public class ConstructorTest {
 
@@ -40,6 +40,9 @@ public class ConstructorTest {
         driver.manage().window().maximize();
     }
 
+
+
+
     @Test
     @DisplayName("Переход к разделу 'Начинки'")
     public void fillingsTest() {
@@ -47,7 +50,7 @@ public class ConstructorTest {
         mainPage.openMainPage();
         mainPage.waitCreateBurgerHeader();
         mainPage.clickFillingButton();
-        assertTrue("Не удалось перейти к выбору начинок", mainPage.isFillingsOnDisplay());
+        assertEquals("Не удалось перейти к выбору начинок", "Начинки", mainPage.isCorrectSection());
     }
 
     @Test
@@ -57,19 +60,19 @@ public class ConstructorTest {
         mainPage.openMainPage();
         mainPage.waitCreateBurgerHeader();
         mainPage.clickSauceButton();
-        assertTrue("Не удалось перейти к выбору соусов", mainPage.isSaucesOnDisplay());
+        assertEquals("Не удалось перейти к выбору соусов", "Соусы",mainPage.isCorrectSection());
     }
 
     @Test
-    @DisplayName("Переход к разделу 'Начинки'")
+    @DisplayName("Переход к разделу 'Булки'")
     public void bunsTest() {
         MainPage mainPage = new MainPage(driver);
         mainPage.openMainPage();
         mainPage.waitCreateBurgerHeader();
         mainPage.clickSauceButton();
-        assertTrue("Не удалось перейти к выбору соусов", mainPage.isSaucesOnDisplay());
+        assertEquals("Не удалось перейти к выбору соусов", "Соусы", mainPage.isCorrectSection());
         mainPage.clickBunButton();
-        assertTrue("Не удалось перейти к выбору булок", mainPage.isBunsOnDisplay());
+        assertEquals("Не удалось перейти к выбору булок", "Булки", mainPage.isCorrectSection());
     }
 
     @After

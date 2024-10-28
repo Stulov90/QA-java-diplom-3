@@ -28,7 +28,7 @@ public class LoginPage {
     @Step("Нажатие на кнопку 'Зарегистрироваться'")
     public void clickRegisterButtonOnLoginPage() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }
@@ -42,7 +42,7 @@ public class LoginPage {
     @Step("Нажатие на кнопку 'Войти'")
     public void clickEntryButtonOnLoginPage() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }
@@ -56,7 +56,7 @@ public class LoginPage {
     @Step("Нажатие на кнопку 'Восстановить пароль'")
     public void clickPasswordRecoveryButtonOnLoginPage() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }

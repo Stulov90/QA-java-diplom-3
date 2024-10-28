@@ -27,7 +27,7 @@ public class ProfilePage {
     @Step("Нажатие на кнопку 'Конструктор'")
     public void clickConstructorButton() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }
@@ -41,7 +41,7 @@ public class ProfilePage {
     @Step("Нажатие на логотип 'Stellar Burgers'")
     public void clickLogoStellarBurgers() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }
@@ -55,7 +55,7 @@ public class ProfilePage {
     @Step("Нажатие на кнопку 'Выход'")
     public void clickExitButton() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }

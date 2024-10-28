@@ -25,7 +25,7 @@ public class PasswordRecoveryPage {
 
     public void clickEntryButtonOnPasswordRecoveryPage() {
         try {
-            WebElement overlayElement = driver.findElement(By.xpath("//*[text()='Modal_modal_overlay__x2ZCr']"));
+            WebElement overlayElement = driver.findElement(By.xpath(".//*[text()='Modal_modal_overlay__x2ZCr']"));
             if (overlayElement.isDisplayed()) {
                 overlayElement.click();
             }
