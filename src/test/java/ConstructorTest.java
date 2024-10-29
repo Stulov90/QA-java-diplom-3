@@ -60,7 +60,7 @@ public class ConstructorTest {
         mainPage.openMainPage();
         mainPage.waitCreateBurgerHeader();
         mainPage.clickSauceButton();
-        assertEquals("Не удалось перейти к выбору соусов", "Соусы",mainPage.isCorrectSection());
+        assertEquals("Не удалось перейти к выбору соусов", "Соусы", mainPage.isCorrectSection());
     }
 
     @Test
